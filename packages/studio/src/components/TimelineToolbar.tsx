@@ -194,26 +194,19 @@ export function TimelineToolbar({
                     : "text-neutral-600 hover:text-neutral-400"
                 }`}
               >
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <svg width="18" height="18" viewBox="0 0 10 10" fill="none">
+                  {/* Same diamond outline as the Add-keyframe icon, with a
+                      record-style dot inside: filled = auto-recording,
+                      hollow = manual edits won't be keyframed. */}
+                  <path d="M5 0.7L9.3 5L5 9.3L0.7 5Z" stroke="currentColor" strokeWidth="1" />
                   <circle
-                    cx="7"
-                    cy="7"
-                    r="5"
+                    cx="5"
+                    cy="5"
+                    r="1.8"
                     fill={autoKeyframeEnabled ? "currentColor" : "none"}
                     stroke="currentColor"
-                    strokeWidth="1.4"
+                    strokeWidth="1"
                   />
-                  {!autoKeyframeEnabled && (
-                    <line
-                      x1="2.2"
-                      y1="11.8"
-                      x2="11.8"
-                      y2="2.2"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      strokeLinecap="round"
-                    />
-                  )}
                 </svg>
               </button>
             </Tooltip>
